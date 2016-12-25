@@ -31,5 +31,12 @@
             "});"
 		],
 		"description": "Map object keys properties"
+	},
+	 "Require statement": {
+		"prefix": "req",
+		"body": [
+			"const $1 = require('$2');"
+		],
+		"description": "basic require statement"
 	}
 }
