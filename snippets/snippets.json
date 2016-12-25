@@ -30,6 +30,6 @@
 			"\t$2",
             "});"
 		],
-		"description": "array map with arrow function"
+		"description": "Map object keys properties"
 	}
 }
