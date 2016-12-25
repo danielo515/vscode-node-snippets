@@ -18,9 +18,18 @@
 		"prefix": ".map",
 		"body": [
 			".map(( $1 ) => {",
+			"\t$1",
+            "});"
+		],
+		"description": "array map with arrow function"
+	},
+	 "Object Keys map": {
+		"prefix": "Okmap",
+		"body": [
+			"Object.keys($1).map(( $2 ) => {",
 			"\t$2",
             "});"
 		],
-		"description": "Log output to console"
+		"description": "array map with arrow function"
 	}
 }
