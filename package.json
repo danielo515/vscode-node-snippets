@@ -1,0 +1,36 @@
+{
+  "name": "danielo-node-snippets",
+  "description": "My favorite node snippets packed as a plugin for convenience",
+  "version": "1.0.0",
+  "displayName": "Danielo node snippets",
+  "publisher": "danielo515",
+  "icon": "images/javascript.png",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielo515/vscode-node-snippets"
+  },
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      }, {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      }, {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      }, {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
