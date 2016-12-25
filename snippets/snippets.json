@@ -14,4 +14,13 @@
 		"description": "Log output to console"
 	}
 */
+	 "Simple map": {
+		"prefix": ".map",
+		"body": [
+			".map(( $1 ) => {",
+			"\t$2",
+            "});"
+		],
+		"description": "Log output to console"
+	}
 }
