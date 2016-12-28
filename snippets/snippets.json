@@ -38,5 +38,12 @@
 			"const $1 = require('$2');"
 		],
 		"description": "basic require statement"
+	},
+	 "use strict statement": {
+		"prefix": "use",
+		"body": [
+			"'use strict';"
+		],
+		"description": " use strict statement"
 	}
 }
