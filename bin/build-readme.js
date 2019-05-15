@@ -8,10 +8,8 @@ const makeRow = ({prefix,description}) => `| ${prefix} | ${description} |`
 
 const main = async () => {
     const template = await readFile(path.resolve('./bin/README.tpl.md'),'utf8');
-    console.log(template);
     const snippets = JSON.parse((await readFile(path.resolve('./snippets/snippets.json'),'utf8')).replace(/^\s*\/\/.*$/gm,''));
     const tableBody = Object.entries(snippets).map(( [k,value] ) =>  makeRow(value) ).join('\n');
-    console.log(tableBody);
     await writeFile(path.resolve('README.md'),[
         template,
         '| Prefix | Description |', '|----|----|',tableBody
