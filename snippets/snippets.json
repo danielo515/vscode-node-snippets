@@ -1,33 +1,18 @@
 {
-/*
-	 // Place your snippets for JavaScript (Babel) here. Each snippet is defined under a snippet name and has a prefix, body and
-	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	 // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-	 // same ids are connected.
-	 // Example:
-	 "Print to console": {
-		"prefix": "log",
-		"body": [
-			"console.log('$1');",
-			"$2"
-		],
-		"description": "Log output to console"
-	}
-*/
 	 "Simple map": {
-		"prefix": ".map",
+		"prefix": "map",
 		"body": [
 			".map(( $1 ) => {",
-			"\t$1",
+			"\treturn $1",
             "});"
 		],
 		"description": "array map with arrow function"
 	},
 	 "Object Keys map": {
-		"prefix": "Okmap",
+		"prefix": "okmap",
 		"body": [
 			"Object.keys($1).map(( $2 ) => {",
-			"\t$2",
+			"\treturn $2",
             "});"
 		],
 		"description": "Map object keys properties"
@@ -35,7 +20,7 @@
 	 "Require statement": {
 		"prefix": "req",
 		"body": [
-			"const $1 = require('$2');"
+			"const $2 = require('$1');"
 		],
 		"description": "basic require statement"
 	},
