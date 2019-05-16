@@ -15,7 +15,7 @@
         "url": "https://github.com/danielo515/vscode-node-snippets"
     },
     "engines": {
-        "vscode": "^0.10.x"
+        "vscode": "^1.14.x"
     },
     "categories": [
         "Snippets"
