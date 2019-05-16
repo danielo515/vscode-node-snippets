@@ -1,119 +1,99 @@
 {
-	 "Simple map": {
-		"prefix": "map",
-		"body": [
-			".map(( $1 ) => {",
-			"\treturn $1",
-            "});"
-		],
-		"description": "array map with arrow function"
-	},
-	 "Object Keys map": {
-		"prefix": "okmap",
-		"body": [
-			"Object.keys($1).map(( $2 ) => {",
-			"\treturn $2",
-            "});"
-		],
-		"description": "Map object keys properties"
-	},
-	 "Require statement": {
-		"prefix": "req",
-		"body": [
-			"const $2 = require('$1');"
-		],
-		"description": "basic require statement"
-	},
-	 "use strict statement": {
-		"prefix": "use",
-		"body": [
-			"'use strict';"
-		],
-		"description": "use strict statement"
-	},
-	//Unit test basic file
-    "Unit test headers": {
-        "prefix": "testheaders",
-        "body": [
-            "'use strict';",
-            "\n// Load modules",
-            "const Code = require('code');",
-            "const Lab = require('lab');",
-            "\n// Test shortcuts",
-            "const lab = exports.lab = Lab.script();",
-            "const describe = lab.describe;",
-            "const it = lab.it;",
-            "const expect = Code.expect;"
-        ]
-    },
-    //Unit test snippets stolen from VSCode.unitTestSnippets
-    "Unit Test Describe with it": {
-        "prefix": "descit",
-        "body": [
-            "describe ('$1', () => {",
-            "\n\tit('$2', (done) => {",
-            "\t\t$3",
-            "\t});",
-            "});"
-        ],
-        "description": "Describe with it"
-    },
-    "Unit Test Describe without it": {
-        "prefix": "desc",
-        "body": [
-            "describe ('$1', (done) => {",
-            "\n\t$2",
-            "});"
-        ],
-        "description": "Describe without it"
-    },
-    "Unit Test it": {
-        "prefix": "dit",
-        "body": [
-            "it ('$1', (done) => {",
-            "\n\t$2",
-            "});"
-        ],
-        "description": "Unit Test it"
-    },
-    "Expect toExist": {
-        "prefix": "exte",
-        "body": "expect($object).to.exist($1);$0",
-        "description": "Expect to exist"
-    },
-    "Expect toNotExist": {
-        "prefix": "exne",
-        "body": "expect($object).to.not.exist($1);$0",
-        "description": "Expect to not Exist"
-    },
-    "Expect toBe": {
-        "prefix": "extb",
-        "body": "expect($object).to.be.$1($2);$0",
-        "description": "Expect to be"
-    },
-    "toNotBeNull": {
-        "prefix": "exnb",
-        "body": "expect($object).to.not.be.null();$0",
-        "description": "Expect to not be null"
-    },
-    "toBeNull": {
-        "prefix": "exnb",
-        "body": "expect($object).to.be.null();$0",
-        "description": "Expect to be null"
-    },
-    "Expect toEqual": {
-        "prefix": "extq",
-        "body": "expect($object).to.equal($1);$0",
-        "description": "Expect to be equal"
-    },
-    "Expect toNotEqual": {
-        "prefix": "exnq",
-        "body": "expect($object).to.not.equal($1);$0",
-        "description": "Expect toEqtoNotEqualual"
-    },
-    "Expect toThrow": {
-        "prefix": "extt",
-        "body": "expect($object).to.throw($1);$0",
-        "description": "Expect to not throw"
-    }
+  "Simple map": {
+    "prefix": "map",
+    "body": [".map(( $1 ) => {", "\treturn $1", "});"],
+    "description": "array map with arrow function"
+  },
+  "Object Keys map": {
+    "prefix": "okmap",
+    "body": ["Object.keys($1).map(( $2 ) => {", "\treturn $2", "});"],
+    "description": "Map object keys properties"
+  },
+  "Require statement": {
+    "prefix": "req",
+    "body": ["const $2 = require('$1');"],
+    "description": "basic require statement"
+  },
+  "use strict statement": {
+    "prefix": "use",
+    "body": ["'use strict';"],
+    "description": "use strict statement"
+  },
+  // === Unit test basic file
+  "Unit test headers": {
+    "prefix": "testheaders",
+    "body": [
+      "'use strict';",
+      "\n// Load modules",
+      "const Code = require('code');",
+      "const Lab = require('lab');",
+      "\n// Test shortcuts",
+      "const lab = exports.lab = Lab.script();",
+      "const describe = lab.describe;",
+      "const it = lab.it;",
+      "const expect = Code.expect;"
+    ]
+  },
+  // === Unit test snippets stolen from VSCode.unitTestSnippets
+  "Unit Test Describe with it": {
+    "prefix": "descit",
+    "body": [
+      "describe ('$1', () => {",
+      "\n\tit('$2', (done) => {",
+      "\t\t$3",
+      "\t});",
+      "});"
+    ],
+    "description": "Describe with it"
+  },
+  "Unit Test Describe without it": {
+    "prefix": "desc",
+    "body": ["describe ('$1', (done) => {", "\n\t$2", "});"],
+    "description": "Describe without it"
+  },
+  "Unit Test it": {
+    "prefix": "dit",
+    "body": ["it ('$1', (done) => {", "\n\t$2", "});"],
+    "description": "Unit Test it"
+  },
+  "Expect toExist": {
+    "prefix": "exte",
+    "body": "expect($object).to.exist($1);$0",
+    "description": "Expect to exist"
+  },
+  "Expect toNotExist": {
+    "prefix": "exne",
+    "body": "expect($object).to.not.exist($1);$0",
+    "description": "Expect to not Exist"
+  },
+  "Expect toBe": {
+    "prefix": "extb",
+    "body": "expect($object).to.be.$1($2);$0",
+    "description": "Expect to be"
+  },
+  "toNotBeNull": {
+    "prefix": "exnb",
+    "body": "expect($object).to.not.be.null();$0",
+    "description": "Expect to not be null"
+  },
+  "toBeNull": {
+    "prefix": "exnb",
+    "body": "expect($object).to.be.null();$0",
+    "description": "Expect to be null"
+  },
+  "Expect toEqual": {
+    "prefix": "extq",
+    "body": "expect($object).to.equal($1);$0",
+    "description": "Expect to be equal"
+  },
+  "Expect toNotEqual": {
+    "prefix": "exnq",
+    "body": "expect($object).to.not.equal($1);$0",
+    "description": "Expect toEqtoNotEqualual"
+  },
+  "Expect toThrow": {
+    "prefix": "extt",
+    "body": "expect($object).to.throw($1);$0",
+    "description": "Expect to not throw"
+  }
 }
