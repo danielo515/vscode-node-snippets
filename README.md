@@ -9,9 +9,13 @@ My favorite node snippets packed as a plugin for convenience
 | okmap | Map object keys properties |
 | req | basic require statement |
 | use | use strict statement |
+| imptest | imports the current file for testing |
+| reqtest | requires the current file for testing |
+| reqaxios | require axios library |
 | testheaders | undefined |
 | descit | Describe with it |
 | desc | Describe without it |
+| desc | Describe statement with current file as text |
 | dit | Unit Test it |
 | exte | Expect to exist |
 | exne | Expect to not Exist |

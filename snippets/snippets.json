@@ -19,6 +19,26 @@
     "body": ["'use strict';"],
     "description": "use strict statement"
   },
+  // == Require shortcuts
+    "test-import": {
+      "prefix": "imptest",
+      "description": "imports the current file for testing",
+      "body": [
+        "import ${TM_FILENAME_BASE/(\\..*)//} from './${TM_FILENAME_BASE/(\\..*)//}';"
+      ]
+    },
+    "test-require": {
+      "prefix": "reqtest",
+      "description": "requires the current file for testing",
+      "body": [
+        "const ${TM_FILENAME_BASE/(\\..*)//} = require('./${TM_FILENAME_BASE/(\\..*)//}');"
+      ]
+    },
+    "require axios": {
+      "prefix": "reqaxios",
+      "description": "require axios library",
+      "body": "const axios = require('axios');"
+    },
   // === Unit test basic file
   "Unit test headers": {
     "prefix": "testheaders",
@@ -50,6 +70,11 @@
     "prefix": "desc",
     "body": ["describe ('$1', (done) => {", "\n\t$2", "});"],
     "description": "Describe without it"
+  },
+  "Unit Test Describe current file": {
+    "prefix": "desc",
+    "body": ["describe ('${TM_FILENAME_BASE/(\\..*)//}', (done) => {", "\n\t$2", "});"],
+    "description": "Describe statement with current file as text"
   },
   "Unit Test it": {
     "prefix": "dit",
