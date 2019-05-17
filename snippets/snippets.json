@@ -73,7 +73,7 @@
   },
   "Unit Test Describe current file": {
     "prefix": "descfi",
-    "body": ["describe ('${TM_FILENAME_BASE/(\\..*)//}', (done) => {", "\n\t$2", "});"],
+    "body": ["describe ('${TM_FILENAME_BASE/([.].*)//}', (done) => {", "\n\t$1", "});"],
     "description": "Describe statement with current file as text"
   },
   "Unit Test it": {
