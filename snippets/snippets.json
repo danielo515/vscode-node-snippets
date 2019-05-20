@@ -124,6 +124,7 @@
   // Redux snippets
   "Redux basic mappings":{
     "prefix":"rxmap",
+    "description":"redux mapstate and mapDispatch using bind action creators",
     "body":["const mapStateToProps = (state) => ({", "  ", "  })", "  ",
       "  const mapDispatchToProps = dispatch => bindActionCreators({ {", "    ", "  }, dispatch);"]
   }
