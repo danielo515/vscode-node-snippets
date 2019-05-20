@@ -6,6 +6,10 @@
     "publisher": "danielo515",
     "icon": "images/danielo.png",
     "license": "SEE LICENSE IN LICENSE.md",
+    "main":"extension.js",
+    "activationEvents": [
+		"*"
+	],
     "scripts": {
         "deploy": "vsce publish",
         "feat": "yarn run deploy minor",
@@ -39,6 +43,13 @@
                 "language": "typescriptreact",
                 "path": "./snippets/snippets.json"
             }
-        ]
+        ],
+        "commands": [
+            {
+              "command": "danieloSnippets.sayHello",
+              "title": "Say Hello",
+              "category": "Danielo"
+            }
+          ]
     }
 }
