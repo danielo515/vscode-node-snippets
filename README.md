@@ -25,4 +25,4 @@ My favorite node snippets packed as a plugin for convenience
 | extq | Expect to be equal |
 | exnq | Expect toEqtoNotEqualual |
 | extt | Expect to not throw |
-| rxmap | undefined |
+| rxmap | redux mapstate and mapDispatch using bind action creators |
