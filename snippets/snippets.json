@@ -120,5 +120,11 @@
     "prefix": "extt",
     "body": "expect($1).to.throw($2);$0",
     "description": "Expect to not throw"
+  },
+  // Redux snippets
+  "Redux basic mappings":{
+    "prefix":"rxmap",
+    "body":["const mapStateToProps = (state) => ({", "  ", "  })", "  ",
+      "  const mapDispatchToProps = dispatch => bindActionCreators({ {", "    ", "  }, dispatch);"]
   }
 }
