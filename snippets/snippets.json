@@ -20,25 +20,25 @@
     "description": "use strict statement"
   },
   // == Require shortcuts
-    "test-import": {
-      "prefix": "imptest",
-      "description": "imports the current file for testing",
-      "body": [
-        "import ${TM_FILENAME_BASE/(\\..*)//} from './${TM_FILENAME_BASE/(\\..*)//}';"
-      ]
-    },
-    "test-require": {
-      "prefix": "reqtest",
-      "description": "requires the current file for testing",
-      "body": [
-        "const ${TM_FILENAME_BASE/(\\..*)//} = require('./${TM_FILENAME_BASE/(\\..*)//}');"
-      ]
-    },
-    "require axios": {
-      "prefix": "reqaxios",
-      "description": "require axios library",
-      "body": "const axios = require('axios');"
-    },
+  "test-import": {
+    "prefix": "imptest",
+    "description": "imports the current file for testing",
+    "body": [
+      "import ${TM_FILENAME_BASE/(\\..*)//} from './${TM_FILENAME_BASE/(\\..*)//}';"
+    ]
+  },
+  "test-require": {
+    "prefix": "reqtest",
+    "description": "requires the current file for testing",
+    "body": [
+      "const ${TM_FILENAME_BASE/(\\..*)//} = require('./${TM_FILENAME_BASE/(\\..*)//}');"
+    ]
+  },
+  "require axios": {
+    "prefix": "reqaxios",
+    "description": "require axios library",
+    "body": "const axios = require('axios');"
+  },
   // === Unit test basic file
   "Unit test headers": {
     "prefix": "testheaders",
@@ -73,7 +73,11 @@
   },
   "Unit Test Describe current file": {
     "prefix": "descfi",
-    "body": ["describe ('${TM_FILENAME_BASE/([.].*)//}', (done) => {", "\n\t$1", "});"],
+    "body": [
+      "describe ('${TM_FILENAME_BASE/([.].*)//}', (done) => {",
+      "\n\t$1",
+      "});"
+    ],
     "description": "Describe statement with current file as text"
   },
   "Unit Test it": {
@@ -122,10 +126,26 @@
     "description": "Expect to not throw"
   },
   // Redux snippets
-  "Redux basic mappings":{
-    "prefix":"rxmap",
-    "description":"redux mapstate and mapDispatch using bind action creators",
-    "body":["const mapStateToProps = (state) => ({", "  ", "  })", "  ",
-      "  const mapDispatchToProps = dispatch => bindActionCreators({ {", "    ", "  }, dispatch);"]
+  "Redux basic mappings": {
+    "prefix": "rxmap",
+    "description": "redux mapstate and mapDispatch using bind action creators",
+    "body": [
+      "const mapStateToProps = (state) => ({",
+      "  ",
+      "  })",
+      "  ",
+      "  const mapDispatchToProps = dispatch => bindActionCreators({ {",
+      "    ",
+      "  }, dispatch);"
+    ]
+  },
+  "Merge props": {
+    "pre": "rxmerge",
+    "description": "Creates a redux mergeProps function body",
+    "body": [
+      "const mergeProps = (state, actions, props) => {",
+      "      return { ...state, ...actions, ...props };",
+      "    };"
+    ]
   }
 }
