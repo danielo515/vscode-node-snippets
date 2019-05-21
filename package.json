@@ -1,15 +1,15 @@
 {
     "name": "danielo-node-snippets",
     "description": "My favorite node snippets packed as a plugin for convenience",
-    "version": "1.6.1",
+    "version": "1.7.0",
     "displayName": "Danielo node snippets",
     "publisher": "danielo515",
     "icon": "images/danielo.png",
     "license": "SEE LICENSE IN LICENSE.md",
-    "main":"extension.js",
+    "main": "extension.js",
     "activationEvents": [
-		"*"
-	],
+        "*"
+    ],
     "scripts": {
         "deploy": "vsce publish",
         "feat": "yarn run deploy minor",
@@ -46,10 +46,10 @@
         ],
         "commands": [
             {
-              "command": "danieloSnippets.convertToArrayString",
-              "title": "To array of strings",
-              "category": "Danielo"
+                "command": "danieloSnippets.convertToArrayString",
+                "title": "To array of strings",
+                "category": "Danielo"
             }
-          ]
+        ]
     }
 }
