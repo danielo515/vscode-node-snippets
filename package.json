@@ -40,7 +40,7 @@
                 "path": "./snippets/snippets.json"
             },
             {
-                "language": "typescriptreac5t",
+                "language": "typescriptreact",
                 "path": "./snippets/snippets.json"
             }
         ],
@@ -48,6 +48,17 @@
             {
                 "command": "danieloSnippets.convertToArrayString",
                 "title": "To array of strings",
+                "category": "Danielo"
+            },
+            {
+                "command": "danieloSnippets.saveRegex",
+                "title": "Save regex",
+                "description": "Saves a regex to use it later",
+                "category": "Danielo"
+            },
+            {
+                "command": "danieloSnippets.loadRegex",
+                "title": "Execute saved regex",
                 "category": "Danielo"
             }
         ]

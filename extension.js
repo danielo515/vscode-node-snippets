@@ -11,18 +11,53 @@ const updateSelection = updater => {
   editor.edit(editBuilder => editBuilder.replace(selection,updater(text)));
 }
 
+const parse = str => {
+  try{
+    return JSON.parse(str)
+  } catch(err){
+    return {}
+  }
+};
+
+const register = ([command, handler]) => vscode.commands.registerCommand(command, handler)
+
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-  const command = 'danieloSnippets.convertToArrayString';
   // vscode.window.showInformationMessage('Danielo is here to help....');
   
-  const commandHandler = () => {
+  const convertToArrayString = () => {
     updateSelection(text => JSON.stringify(text.split('\n'),null,2));
   };
+  const saveRegex = async () => {
+    const regex = await vscode.window.showInputBox({prompt: 'Input the regular expression' });
+    const name = await vscode.window.showInputBox({prompt: 'Give the regex a name' });
+    if(!regex || !name) {
+      vscode.window.showInformationMessage('Operation cancelled');
+      return;
+    }
+    const store = parse(context.globalState.get('stored-regex'));
+    store[name] = regex;
+    context.globalState.update('stored-regex',JSON.stringify(store));
+    vscode.window.showInformationMessage('Regex saved');
+  };
 
-  context.subscriptions.push(vscode.commands.registerCommand(command, commandHandler));
+  const loadRegex = async () => {
+    const store = parse(context.globalState.get('stored-regex'));
+    const options = Object.keys(store);
+    const selection = await vscode.window.showQuickPick(options);
+    const message = 'Here is your regex: ' + (store[selection] || 'Not found')
+    vscode.window.showInformationMessage(message);
+  };
+
+  const commands = [
+    ['danieloSnippets.convertToArrayString',convertToArrayString],
+    ['danieloSnippets.saveRegex',saveRegex],
+    ['danieloSnippets.loadRegex',loadRegex],
+  ].map(register);
+
+  context.subscriptions.push(...commands);
 }
 
 module.exports = {
