@@ -26,3 +26,4 @@ My favorite node snippets packed as a plugin for convenience
 | exnq | Expect toEqtoNotEqualual |
 | extt | Expect to not throw |
 | rxmap | redux mapstate and mapDispatch using bind action creators |
+| undefined | Creates a redux mergeProps function body |

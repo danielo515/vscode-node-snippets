@@ -140,7 +140,7 @@
     ]
   },
   "Merge props": {
-    "pre": "rxmerge",
+    "prefix": "rxmerge",
     "description": "Creates a redux mergeProps function body",
     "body": [
       "const mergeProps = (state, actions, props) => {",
