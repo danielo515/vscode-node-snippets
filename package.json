@@ -13,7 +13,7 @@
     "scripts": {
         "deploy": "vsce publish",
         "feat": "yarn run deploy minor",
-        "vscode:prepublish": "node bin/build-readme.js"
+        "vscode:prepublish": "node bin/build-readme.js && git add ."
     },
     "repository": {
         "type": "git",
@@ -40,14 +40,14 @@
                 "path": "./snippets/snippets.json"
             },
             {
-                "language": "typescriptreact",
+                "language": "typescriptreac5t",
                 "path": "./snippets/snippets.json"
             }
         ],
         "commands": [
             {
-              "command": "danieloSnippets.sayHello",
-              "title": "Say Hello",
+              "command": "danieloSnippets.convertToArrayString",
+              "title": "To array of strings",
               "category": "Danielo"
             }
           ]
