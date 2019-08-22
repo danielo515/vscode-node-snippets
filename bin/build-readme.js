@@ -12,7 +12,9 @@ const main = async () => {
     const tableBody = Object.entries(snippets).map(( [k,value] ) =>  makeRow(value) ).join('\n');
     await writeFile(path.resolve('README.md'),[
         template,
-        '| Prefix | Description |', '|----|----|',tableBody
+        '| Prefix | Description |', 
+        '|----|----|',
+        tableBody
     ].join('\n'),'utf8')
 };
 
