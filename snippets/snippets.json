@@ -19,6 +19,17 @@
     "body": ["'use strict';"],
     "description": "use strict statement"
   },
+  // == Function shortcuts
+  "tap arguments": {
+    "prefix": "tap-args",
+    "description": "a function that just console log it's arguments",
+    "body": "(...args) => console.log('$1',...args)"
+  },
+  "tap": {
+    "prefix": "tap",
+    "description": "a function that just console log it's arguments",
+    "body": "(${x}) => console.log('$1',${x}) || ${x}"
+  },
   // == Require shortcuts
   "test-import": {
     "prefix": "imptest",
