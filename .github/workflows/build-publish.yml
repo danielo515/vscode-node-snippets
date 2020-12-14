@@ -26,13 +26,13 @@ jobs:
         git config --local user.name "GitHub Action"
         git commit -m "Automatic build"
     - run: npm version patch # This are just snippets, no breaking changes or stuff like that to worry about
-    - name: Push
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        tags: true
     - name: Publish to Visual Studio Marketplace
       uses: HaaLeo/publish-vscode-extension@v0
       with:
           pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
           registryUrl: https://marketplace.visualstudio.com
+    - name: Push
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        tags: true
