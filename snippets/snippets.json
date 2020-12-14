@@ -27,8 +27,17 @@
   },
   "tap": {
     "prefix": "tap",
-    "description": "a function that just console log it's arguments",
+    "description": "a function that just console log one argument",
     "body": "(${x}) => console.log('$1',${x}) || ${x}"
+  },
+  "arrow function with body": {
+    "prefix": "arrb",
+    "body": [
+      "($1) => {",
+      "  $0",
+      " }"
+    ],
+    "description": "Arrow function with body"
   },
   // == Require shortcuts
   "test-import": {
