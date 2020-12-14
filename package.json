@@ -12,7 +12,8 @@
     "scripts": {
         "deploy": "vsce publish",
         "feat": "yarn run deploy minor",
-        "vscode:prepublish": "node bin/build-readme.js && git add ."
+        "build": "node bin/build-readme.js && git add ."
+        "vscode:prepublish": "yarn build"
     },
     "repository": {
         "type": "git",
