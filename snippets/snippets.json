@@ -22,12 +22,12 @@
   // == Function shortcuts
   "tap arguments": {
     "prefix": "tap-args",
-    "description": "a function that just console log it's arguments",
+    "description": "A function that just console log it's arguments",
     "body": "(...args) => console.log('$1',...args)"
   },
   "tap": {
     "prefix": "tap",
-    "description": "a function that just console log one argument",
+    "description": "A function that just console log one argument",
     "body": "(${x}) => console.log('$1',${x}) || ${x}"
   },
   "arrow function with body": {
