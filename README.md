@@ -10,7 +10,8 @@ My favorite node snippets packed as a plugin for convenience
 | req | basic require statement |
 | use | use strict statement |
 | tap-args | a function that just console log it's arguments |
-| tap | a function that just console log it's arguments |
+| tap | a function that just console log one argument |
+| arrb | Arrow function with body |
 | imptest | imports the current file for testing |
 | reqtest | requires the current file for testing |
 | reqaxios | require axios library |
