@@ -14,13 +14,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: setup-git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
     - uses: actions/setup-node@v1
       with:
         node-version: 12
     - run: npm install
     - run: npm run build --if-present
     - run: npm version patch # This are just snippets, no breaking changes or stuff like that to worry about
+    - run: git commit -ma "Automatic build"
     - name: Push
-      uses: stefanzweifel/git-auto-commit-action@v4
+      uses: ad-m/github-push-action@master
       with:
-        push_options: --follow-tags
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        tags: true
