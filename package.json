@@ -12,7 +12,7 @@
     "scripts": {
         "deploy": "vsce publish",
         "feat": "yarn run deploy minor",
-        "build": "node bin/build-readme.js && git add ."
+        "build": "node bin/build-readme.js && git add .",
         "vscode:prepublish": "yarn build"
     },
     "repository": {
