@@ -6,7 +6,6 @@
     "publisher": "danielo515",
     "icon": "images/danielo.png",
     "license": "SEE LICENSE IN LICENSE.md",
-    "activationEvents": [],
     "scripts": {
         "deploy": "vsce publish",
         "feat": "yarn run deploy minor",
