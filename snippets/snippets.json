@@ -1,171 +1,182 @@
 {
-  "Simple map": {
-    "prefix": "map",
-    "body": [".map(( $1 ) => {", "\treturn $1", "});"],
-    "description": "array map with arrow function"
-  },
-  "Object Keys map": {
-    "prefix": "okmap",
-    "body": ["Object.keys($1).map(( $2 ) => {", "\treturn $2", "});"],
-    "description": "Map object keys properties"
-  },
-  "Require statement": {
-    "prefix": "req",
-    "body": ["const $2 = require('$1');"],
-    "description": "basic require statement"
-  },
-  "use strict statement": {
-    "prefix": "use",
-    "body": ["'use strict';"],
-    "description": "use strict statement"
-  },
-  // == Function shortcuts
-  "tap arguments": {
-    "prefix": "tap-args",
-    "description": "A function that just console log it's arguments",
-    "body": "(...args) => console.log('$1',...args)"
-  },
-  "tap": {
-    "prefix": "tap",
-    "description": "A function that just console log one argument",
-    "body": "(${x}) => console.log('$1',${x}) || ${x}"
-  },
-  "arrow function with body": {
-    "prefix": "arrb",
-    "body": [
-      "($1) => {",
-      "  $0",
-      " }"
-    ],
-    "description": "Arrow function with body"
-  },
-  // == Require shortcuts
-  "test-import": {
-    "prefix": "imptest",
-    "description": "imports the current file for testing",
-    "body": [
-      "import ${TM_FILENAME_BASE/(\\..*)//} from './${TM_FILENAME_BASE/(\\..*)//}';"
-    ]
-  },
-  "test-require": {
-    "prefix": "reqtest",
-    "description": "requires the current file for testing",
-    "body": [
-      "const ${TM_FILENAME_BASE/(\\..*)//} = require('./${TM_FILENAME_BASE/(\\..*)//}');"
-    ]
-  },
-  "require axios": {
-    "prefix": "reqaxios",
-    "description": "require axios library",
-    "body": "const axios = require('axios');"
-  },
-  // === Unit test basic file
-  "Unit test headers": {
-    "prefix": "testheaders",
-    "body": [
-      "'use strict';",
-      "\n// Load modules",
-      "const Code = require('code');",
-      "const Lab = require('lab');",
-      "\n// Test shortcuts",
-      "const lab = exports.lab = Lab.script();",
-      "const describe = lab.describe;",
-      "const it = lab.it;",
-      "const expect = Code.expect;"
-    ]
-  },
-  // === Unit test snippets stolen from VSCode.unitTestSnippets
-  "Unit Test Describe with it": {
-    "prefix": "descit",
-    "body": [
-      "describe ('$1', () => {",
-      "\n\tit('$2', (done) => {",
-      "\t\t$3",
-      "\t});",
-      "});"
-    ],
-    "description": "Describe with it"
-  },
-  "Unit Test Describe without it": {
-    "prefix": "desc",
-    "body": ["describe ('$1', (done) => {", "\n\t$2", "});"],
-    "description": "Describe without it"
-  },
-  "Unit Test Describe current file": {
-    "prefix": "descfi",
-    "body": [
-      "describe ('${TM_FILENAME_BASE/([.].*)//}', (done) => {",
-      "\n\t$1",
-      "});"
-    ],
-    "description": "Describe statement with current file as text"
-  },
-  "Unit Test it": {
-    "prefix": "dit",
-    "body": ["it ('$1', (done) => {", "\n\t$2", "});"],
-    "description": "Unit Test it"
-  },
-  "Expect toExist": {
-    "prefix": "exte",
-    "body": "expect($1).to.exist();$0",
-    "description": "Expect to exist"
-  },
-  "Expect toNotExist": {
-    "prefix": "exne",
-    "body": "expect($1).to.not.exist($2);$0",
-    "description": "Expect to not Exist"
-  },
-  "Expect toBe": {
-    "prefix": "extb",
-    "body": "expect($1).to.be.$2($2);$0",
-    "description": "Expect to be"
-  },
-  "toNotBeNull": {
-    "prefix": "exnb",
-    "body": "expect($1).to.not.be.null();$0",
-    "description": "Expect to not be null"
-  },
-  "toBeNull": {
-    "prefix": "exnb",
-    "body": "expect($1).to.be.null();$0",
-    "description": "Expect to be null"
-  },
-  "Expect toEqual": {
-    "prefix": "extq",
-    "body": "expect($1).to.equal($2);$0",
-    "description": "Expect to be equal"
-  },
-  "Expect toNotEqual": {
-    "prefix": "exnq",
-    "body": "expect($1).to.not.equal($2);$0",
-    "description": "Expect toEqtoNotEqualual"
-  },
-  "Expect toThrow": {
-    "prefix": "extt",
-    "body": "expect($1).to.throw($2);$0",
-    "description": "Expect to not throw"
-  },
-  // Redux snippets
-  "Redux basic mappings": {
-    "prefix": "rxmap",
-    "description": "redux mapstate and mapDispatch using bind action creators",
-    "body": [
-      "const mapStateToProps = (state) => ({",
-      "  ",
-      "  })",
-      "  ",
-      "  const mapDispatchToProps = dispatch => bindActionCreators({ {",
-      "    ",
-      "  }, dispatch);"
-    ]
-  },
-  "Merge props": {
-    "prefix": "rxmerge",
-    "description": "Creates a redux mergeProps function body",
-    "body": [
-      "const mergeProps = (state, actions, props) => {",
-      "      return { ...state, ...actions, ...props };",
-      "    };"
-    ]
-  }
+    "Simple map": {
+        "prefix": "map",
+        "body": [".map(( $1 ) => {", "\treturn $1", "});"],
+        "description": "array map with arrow function"
+    },
+    "Object Keys map": {
+        "prefix": "okmap",
+        "body": ["Object.keys($1).map(( $2 ) => {", "\treturn $2", "});"],
+        "description": "Map object keys properties"
+    },
+    "Require statement": {
+        "prefix": "req",
+        "body": ["const $2 = require('$1');"],
+        "description": "basic require statement"
+    },
+    "use strict statement": {
+        "prefix": "use",
+        "body": ["'use strict';"],
+        "description": "use strict statement"
+    },
+    // == Function shortcuts
+    "tap arguments": {
+        "prefix": "tap-args",
+        "description": "A function that just console log it's arguments",
+        "body": "(...args) => console.log('$1',...args)"
+    },
+    "tap": {
+        "prefix": "tap",
+        "description": "A function that just console log one argument",
+        "body": "(${x}) => console.log('$1',${x}) || ${x}"
+    },
+    "arrow function with body": {
+        "prefix": "arrb",
+        "body": ["($1) => {", "  $0", " }"],
+        "description": "Arrow function with body"
+    },
+    "arrow function declaration with body": {
+        "prefix": "arrdb",
+        "body": ["const $1 = ($2) => ", "{", "  $0", " }"],
+        "description": "Arrow function declaration with body"
+    },
+    "arrow function declaration": {
+        "prefix": "arrd",
+        "body": ["const $1 = ($2) => $0"],
+        "description": "Arrow function declaration without body"
+    },
+    "arrow function": {
+        "prefix": "arr",
+        "body": ["($1) => $0"],
+        "description": "Arrow function without body"
+    },
+    // == Require shortcuts
+    "test-import": {
+        "prefix": "imptest",
+        "description": "imports the current file for testing",
+        "body": [
+            "import ${TM_FILENAME_BASE/(\\..*)//} from './${TM_FILENAME_BASE/(\\..*)//}';"
+        ]
+    },
+    "test-require": {
+        "prefix": "reqtest",
+        "description": "requires the current file for testing",
+        "body": [
+            "const ${TM_FILENAME_BASE/(\\..*)//} = require('./${TM_FILENAME_BASE/(\\..*)//}');"
+        ]
+    },
+    "require axios": {
+        "prefix": "reqaxios",
+        "description": "require axios library",
+        "body": "const axios = require('axios');"
+    },
+    // === Unit test basic file
+    "Unit test headers": {
+        "prefix": "testheaders",
+        "body": [
+            "'use strict';",
+            "\n// Load modules",
+            "const Code = require('code');",
+            "const Lab = require('lab');",
+            "\n// Test shortcuts",
+            "const lab = exports.lab = Lab.script();",
+            "const describe = lab.describe;",
+            "const it = lab.it;",
+            "const expect = Code.expect;"
+        ]
+    },
+    // === Unit test snippets stolen from VSCode.unitTestSnippets
+    "Unit Test Describe with it": {
+        "prefix": "descit",
+        "body": [
+            "describe ('$1', () => {",
+            "\n\tit('$2', (done) => {",
+            "\t\t$3",
+            "\t});",
+            "});"
+        ],
+        "description": "Describe with it"
+    },
+    "Unit Test Describe without it": {
+        "prefix": "desc",
+        "body": ["describe ('$1', (done) => {", "\n\t$2", "});"],
+        "description": "Describe without it"
+    },
+    "Unit Test Describe current file": {
+        "prefix": "descfi",
+        "body": [
+            "describe ('${TM_FILENAME_BASE/([.].*)//}', (done) => {",
+            "\n\t$1",
+            "});"
+        ],
+        "description": "Describe statement with current file as text"
+    },
+    "Unit Test it": {
+        "prefix": "dit",
+        "body": ["it ('$1', (done) => {", "\n\t$2", "});"],
+        "description": "Unit Test it"
+    },
+    "Expect toExist": {
+        "prefix": "exte",
+        "body": "expect($1).to.exist();$0",
+        "description": "Expect to exist"
+    },
+    "Expect toNotExist": {
+        "prefix": "exne",
+        "body": "expect($1).to.not.exist($2);$0",
+        "description": "Expect to not Exist"
+    },
+    "Expect toBe": {
+        "prefix": "extb",
+        "body": "expect($1).to.be.$2($2);$0",
+        "description": "Expect to be"
+    },
+    "toNotBeNull": {
+        "prefix": "exnb",
+        "body": "expect($1).to.not.be.null();$0",
+        "description": "Expect to not be null"
+    },
+    "toBeNull": {
+        "prefix": "exnb",
+        "body": "expect($1).to.be.null();$0",
+        "description": "Expect to be null"
+    },
+    "Expect toEqual": {
+        "prefix": "extq",
+        "body": "expect($1).to.equal($2);$0",
+        "description": "Expect to be equal"
+    },
+    "Expect toNotEqual": {
+        "prefix": "exnq",
+        "body": "expect($1).to.not.equal($2);$0",
+        "description": "Expect toEqtoNotEqualual"
+    },
+    "Expect toThrow": {
+        "prefix": "extt",
+        "body": "expect($1).to.throw($2);$0",
+        "description": "Expect to not throw"
+    },
+    // Redux snippets
+    "Redux basic mappings": {
+        "prefix": "rxmap",
+        "description": "redux mapstate and mapDispatch using bind action creators",
+        "body": [
+            "const mapStateToProps = (state) => ({",
+            "  ",
+            "  })",
+            "  ",
+            "  const mapDispatchToProps = dispatch => bindActionCreators({ {",
+            "    ",
+            "  }, dispatch);"
+        ]
+    },
+    "Merge props": {
+        "prefix": "rxmerge",
+        "description": "Creates a redux mergeProps function body",
+        "body": [
+            "const mergeProps = (state, actions, props) => {",
+            "      return { ...state, ...actions, ...props };",
+            "    };"
+        ]
+    }
 }
