@@ -12,6 +12,9 @@ My favorite node snippets packed as a plugin for convenience
 | tap-args | A function that just console log it's arguments |
 | tap | A function that just console log one argument |
 | arrb | Arrow function with body |
+| arrdb | Arrow function declaration with body |
+| arrd | Arrow function declaration without body |
+| arr | Arrow function without body |
 | imptest | imports the current file for testing |
 | reqtest | requires the current file for testing |
 | reqaxios | require axios library |
