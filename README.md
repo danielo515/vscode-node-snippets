@@ -15,6 +15,7 @@ My favorite node snippets packed as a plugin for convenience
 | arrdb | Arrow function declaration with body |
 | arrd | Arrow function declaration without body |
 | arr | Arrow function without body |
+| imde | exports the default named as the folder |
 | imptest | imports the current file for testing |
 | reqtest | requires the current file for testing |
 | reqaxios | require axios library |
