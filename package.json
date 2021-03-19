@@ -1,7 +1,7 @@
 {
     "name": "danielo-node-snippets",
     "description": "My favorite node snippets packed as a plugin for convenience",
-    "version": "1.8.12",
+    "version": "1.8.13",
     "displayName": "Danielo node snippets",
     "publisher": "danielo515",
     "icon": "images/danielo.png",
