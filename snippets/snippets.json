@@ -51,6 +51,13 @@
         "description": "Arrow function without body"
     },
     // == Require shortcuts
+    "export default as foldername": {
+        "prefix": "imde",
+        "description": "exports the default named as the folder",
+        "body": [
+            "export { default as ${TM_DIRECTORY/(.*\\/)//}} from './${TM_DIRECTORY/(.*\\/)//}'\n"
+        ]
+    },
     "test-import": {
         "prefix": "imptest",
         "description": "imports the current file for testing",
